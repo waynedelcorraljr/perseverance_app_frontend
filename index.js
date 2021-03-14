@@ -37,6 +37,8 @@ function createPhotos(earthdates) {
             const img_elem = document.createElement("img");
             sol.innerText = `Sol: ${p["sol"]}`;
             img_elem.src = p["img_src"];
+            photo_container.className = "photo_container"
+            photo_container.id = p["id"]
             photo_container.appendChild(img_elem);
             photo_container.appendChild(sol);
             photos_div.appendChild(photo_container);
