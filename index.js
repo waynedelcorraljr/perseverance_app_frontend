@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(earthdates => {
         console.log(earthdates);
         createEarthDates(earthdates);
+        console.log(earthdates);
+        createPhotos(earthdates);
     });
 });
 
 
 function createEarthDates(earthdates) {
-   const ed_div = document.querySelector(".ed");
+   const ed_div = document.querySelector("#ed");
    earthdates["data"].forEach((d) => {
     const ed_container = document.createElement("div");
     const ed_header = document.createElement('h3');
@@ -24,4 +26,20 @@ function createEarthDates(earthdates) {
     ed_div.appendChild(ed_container);
    })
     
+}
+
+function createPhotos(earthdates) {
+    const photos_div = document.querySelector("#photos");
+    earthdates["data"].forEach((d) => {
+        d["attributes"]["photos"].forEach((p) => {
+            const photo_container = document.createElement("div");
+            const sol = document.createElement("p");
+            const img_elem = document.createElement("img");
+            sol.innerText = `Sol: ${p["sol"]}`;
+            img_elem.src = p["img_src"];
+            photo_container.appendChild(img_elem);
+            photo_container.appendChild(sol);
+            photos_div.appendChild(photo_container);
+        })
+    })
 }
