@@ -21,7 +21,7 @@ function createEarthDates(earthdates) {
    ed_row.className = "row"
    earthdates["data"].forEach((d) => {
     const ed_container = document.createElement("div");
-    ed_container.className = "col-sm"
+    ed_container.className = "col-xs-5 col-sm-4 col-md-2"
     const ed_header = document.createElement('h4');
     const ed_p = document.createElement('p')
     ed_header.innerText = d["attributes"]["date"];
@@ -48,7 +48,7 @@ function createPhotos(earthdates) {
             sol.innerText = `Sol: ${p["sol"]}`;
             img_elem.src = p["img_src"];
             img_elem.className = "img-fluid img-thumbnail";
-            photo_container.className = "col-2 col-md-4"
+            photo_container.className = "col-1 col-md-2"
             photo_container.id = p["id"]
             photo_container.appendChild(img_elem);
             photo_container.appendChild(sol);
