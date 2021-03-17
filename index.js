@@ -72,6 +72,7 @@ function createPhotos(earthdates) {
             const photo_container = document.createElement("div");
             const sol = document.createElement("p");
             const heart = document.createElement("p");
+            heart.className = "btn";
             addHeartEvent(heart, p["id"], p["likes"]);
             const img_elem = document.createElement("img");
             heart.id = "empty"
