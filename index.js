@@ -81,9 +81,9 @@ function createPhotos(earthdates) {
             sol.innerText = `Sol: ${p["sol"]}`;
             img_elem.src = p["img_src"];
             img_elem.className = "img-fluid img-thumbnail";
+            addPopOutEvent(img_elem, p["img_src"])
             photo_container.className = "col-1 col-md-2"
             photo_container.id = p["id"]
-            addPopOutEvent(photo_container, p["img_src"])
             photo_container.appendChild(img_elem);
             photo_container.appendChild(heart)
             photo_container.appendChild(sol);
