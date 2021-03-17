@@ -15,13 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 function createEarthDates(earthdates) {
    const ed_div = document.querySelector("#ed");
    ed_div.className = "container-fluid";
    const ed_row = document.createElement("div");
    ed_row.className = "row d-flex justify-content-evenly"
-   ed_row.id = "override"
    earthdates["data"].forEach((d) => {
         const button = document.createElement('div');
         button.className = "p-2"
@@ -37,7 +35,7 @@ function createEarthDates(earthdates) {
         ed_row.appendChild(button);
         ed_div.appendChild(ed_row);
    })
-    
+   document.getElementById('rover_gif').hidden = true;
 }
 
 function addHeartEvent(element, photo_id, current_likes) {
