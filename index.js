@@ -19,7 +19,7 @@ function createEarthDates(earthdates) {
    const ed_div = document.querySelector("#ed");
    ed_div.className = "container-fluid";
    const ed_row = document.createElement("div");
-   ed_row.className = "row d-flex justify-content-evenly"
+   ed_row.className = "row d-flex justify-content-evenly" 
    earthdates["data"].forEach((d) => {
         let button = new Earthdate(d, d.attributes);
         ed_row.appendChild(button.renderEarthdate());
@@ -46,12 +46,23 @@ function createPhotos(earthdates) {
 function renderEarthdateRow(d) {
     let earthdate_row = document.createElement("div");
         earthdate_row.className = "row border";
-        earthdate_row.id = d["id"];
+        earthdate_row.id = d["attributes"]["date"];
+        earthdate_row.hidden = true;
         let earthdate_row_header = document.createElement("h4");
         earthdate_row_header.innerText = d["attributes"]["date"];
         earthdate_row_header.className = "text-center";
         earthdate_row.appendChild(earthdate_row_header);
     return earthdate_row;
+}
+
+function addViewByDateEvent(element, row_id_date) {
+    element.addEventListener('click', () => {
+        if (document.getElementById(`${row_id_date}`).hidden == true) {
+            document.getElementById(`${row_id_date}`).hidden = false;
+        } else {
+            document.getElementById(`${row_id_date}`).hidden = true;
+        }
+    })
 }
 
 
