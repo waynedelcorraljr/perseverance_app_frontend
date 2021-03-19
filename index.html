@@ -8,15 +8,27 @@
         <script type="text/javascript" src="earthdate.js"></script>
         <script type="text/javascript" src="photo.js"></script>
         <script type="text/javascript" src="index.js"></script>
-        
+        <link rel="icon" href="rover.ico">
+
+        <style> 
+            #footer { 
+                position: fixed; 
+                padding: 10px 10px 0px 10px; 
+                bottom: 0; 
+                width: 100%; 
+                /* Height of the footer*/  
+                height: 40px; 
+                background: rgb(227, 248, 221); 
+            } 
+        </style> 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="bg-success text-muted">
         <h1 class="page-header text-center">Perseverance App</h1>
         <div id="rover_gif" class="text-center">
             <h4>Once content has loaded, please select a date to view photos sent back that day.</h4>
-            <p>Click the ♡ underneath a photo to inch it closer to the top. The more likes a photo has, the higher in the feed it will appear!</p>
+            <p>Click the ♡ underneath a photo to inch it closer to the top. <br> The more likes a photo has, the higher in the feed it will appear!</p>
             <img src="rover.gif" width="50%" height="auto"><br>
             <img src="loading.gif" width="10%" height="auto">
         </div>
@@ -25,6 +37,14 @@
         <!-- Include all compiled plugins -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
         <div id="ed"></div>
+        <br>
         <div id="photos"></div>
+        <br> 
+        <br>
     </body>
+    <footer class="footer" id="footer">
+        <div class="container text-center">
+            <span class="text-center"><small>© 2021 Perseverance App  <a href="https://github.com/waynedelcorraljr/perseverance_app_frontend">GitHub</a> <a href="https://www.linkedin.com/in/wayne-del-corral-jr/">LinkedIn</a></small></span>
+        </div>
+    </footer>
 </html>

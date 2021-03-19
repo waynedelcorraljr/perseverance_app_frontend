@@ -20,7 +20,7 @@ class Photo {
         let img_elem = document.createElement("img");
         heart.id = "empty";
         heart.innerText = emptyHeart + ` Total likes: ${this.likes}`;
-        sol.innerText = `Sol: ${this.sol}`;
+        sol.innerText = `   Sol: ${this.sol}  / Current Status: ${this.status.toUpperCase()} / Earthdate: ${this.earth_date}`;
         img_elem.src = this.img_src;
         img_elem.className = "img-fluid img-thumbnail";
         addPopOutEvent(img_elem, this.img_src);

@@ -3,7 +3,7 @@
 const endPointEarthDates = "http://localhost:3000/api/v1/earthdates"
 const endPointPhotos = "http://localhost:3000/api/v1/photos"
 const emptyHeart = "♡" 
-const fullHeart = "♥"
+const fullHeart = "❤️"
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch(endPointEarthDates)
