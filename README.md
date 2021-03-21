@@ -9,3 +9,6 @@ JS app for viewing Perseverance Rover photos.
 - cd root directory
 - run `open index.html`
 - enjoy browsing photos from the Perseverance Rover on Mars!
+
+#### License
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
